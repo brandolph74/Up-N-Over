@@ -236,7 +236,7 @@ public class PlayerMovement : MonoBehaviour
                 state = PlayerState.free;
                 break;
             }
-            poleBase.transform.position = Vector2.MoveTowards(poleBase.position, poleBasePlayer.transform.position, 125f * Time.deltaTime);
+            poleBase.transform.position = Vector2.MoveTowards(poleBase.position, poleBasePlayer.transform.position, 200f * Time.deltaTime);
             yield return null;
         }
         yield return new WaitForSeconds(0.25f);
@@ -366,7 +366,7 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator throwCooldown()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.002f);
         canReturnSpear = true;
     }
 

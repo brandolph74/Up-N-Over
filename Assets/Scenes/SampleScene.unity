@@ -15297,7 +15297,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3843085, y: 1}
+    m_SensorSize: {x: 1.4110512, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -15693,7 +15693,7 @@ GameObject:
   - component: {fileID: 844614033}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15715,7 +15715,8 @@ MonoBehaviour:
   rb: {fileID: 844614035}
   boxCollider: {fileID: 844614034}
   engageDistance: 10
-  movementSpeed: 2
+  movementSpeed: 5
+  moveStep: 1
 --- !u!61 &844614034
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15759,7 +15760,7 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
@@ -16207,6 +16208,7 @@ MonoBehaviour:
   player: {fileID: 903623458}
   poleAnimator: {fileID: 989695681}
   playerAnimator: {fileID: 903623462}
+  poleBase: {fileID: 1138699733}
 --- !u!95 &989695681
 Animator:
   serializedVersion: 4

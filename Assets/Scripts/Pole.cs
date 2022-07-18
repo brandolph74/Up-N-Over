@@ -7,7 +7,8 @@ public class Pole : MonoBehaviour
     public Rigidbody2D player;
     public Animator poleAnimator;
     public Animator playerAnimator;
-    
+    public Rigidbody2D poleBase;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +31,14 @@ public class Pole : MonoBehaviour
             playerAnimator.SetBool("isRunning", false);
             playerAnimator.Play("player_stuck", 0);
         }
+
+        if (collision.gameObject.tag == "Enemy")
+        {
+            var enemy = collision.gameObject;
+            enemy.SetActive(false);
+        }
+
+        
     }
 
     IEnumerator jabTimer()
