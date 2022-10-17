@@ -57,6 +57,8 @@ public class PlayerMovement : MonoBehaviour
         playerControls.Enable();
         playerRB = GetComponent<Rigidbody2D>();
 
+        Application.targetFrameRate = 120;
+
     }
 
     // Update is called once per frame
@@ -397,7 +399,7 @@ public class PlayerMovement : MonoBehaviour
         bool isCrouching = false;
         bool isJumping = false;
 
-        if (jump > 0)
+       if (jump > 0)
         {
             isJumping = true;
         }
